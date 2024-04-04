@@ -1,0 +1,27 @@
+
+
+
+#include <stdio.h>
+
+int main() {
+    int var1, var2;
+
+ 
+    printf("Digite o valor da primeira variavel: ");
+    scanf("%d", &var1);
+
+    printf("Digite o valor da segunda variavel: ");
+    scanf("%d", &var2);
+
+
+    int* endereco_var1 = &var1;
+    int* endereco_var2 = &var2;
+
+    if (endereco_var1 > endereco_var2) {
+        printf("Conteudo do maior endereco: %d\n", *endereco_var1);
+    } else {
+        printf("Conteudo do maior endereco: %d\n", *endereco_var2);
+    }
+
+    return 0;
+}
