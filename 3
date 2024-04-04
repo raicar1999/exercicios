@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void separarPartes(float numero, int *parteInteira, float *parteFracionaria) {
+    *parteInteira = (int)numero;
+    *parteFracionaria = numero - *parteInteira;
+}
+
+int main() {
+    float numero;
+    int parteInteira;
+    float parteFracionaria;
+
+    //
+    printf("Digite um numero real: ");
+    scanf("%f", &numero);
+
+   
+    separarPartes(numero, &parteInteira, &parteFracionaria);
+
+ 
+    printf("Parte inteira: %d\n", parteInteira);
+    printf("Parte fracionaria: %.2f\n", parteFracionaria);
+
+    return 0;
+}
